@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+    grid-template-rows: auto auto auto; /* Alturas de las filas */
+    grid-template-columns: 12% 44% 44%; /* Anchuras de las columnas */
+    height: 100vh; /* Opcional para ocupar la altura completa de la ventana */
+}
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+
+    padding: 1rem;
+}
+aside {
+    height: 98vh;
+
+    grid-area: sidebar;
+}
+footer {
+    grid-area: footer;
+}
+#container > img {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0/16%), 0 2px 10px 0 rgb(0 0 0/12%);
+    width: 180px;
+    height: auto;
+    margin: -5px 0px 0px 0px 0px;
+    text-align: center;
+    border: 3px solid #fff;
+
+    border-radius: 50%;
+}
+#container > img:hover {
+    transform: scale(1.05);
+}

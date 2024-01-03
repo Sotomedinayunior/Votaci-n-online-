@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@keyframes Carga {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wrap {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    padding: 40px 0px 20px 0px;
+    place-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 1.5rem;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+        0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    background-color: white;
+    width: 368px;
+    height: 499px;
+    border-radius: 10px;
+    animation-name: Carga;
+    animation-duration: 3s;
+    animation-delay: ease-in-out;
+}
+
+/* .card:hover {
+    transform: scale(1.02);
+} */
+
+.cover-head {
+    background: linear-gradient(40deg, #0d2857, #0d2857);
+    width: 100%;
+    border-radius: 10px;
+    height: 150px;
+}
+.container-body {
+    margin: -50px 0px 0px 0px;
+}
+.container-body > img {
+    width: 150px;
+    height: 150px;
+    margin: -5px 0px 0px 0px 0px;
+    text-align: center;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0/16%), 0 2px 10px 0 rgb(0 0 0/12%);
+    border-radius: 50%;
+    z-index: 1;
+}
+.name {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: rgb(44, 90, 162);
+    text-align: center;
+    margin: 15px 0px 20px 0px;
+    text-transform: capitalize;
+}
+
+/* .Button-submit {
+    background: linear-gradient(40deg, #0d2857, #0d2857);
+    border: none;
+    max-width: 160px;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0/16%), 0 2px 10px 0 rgb(0 0 0/12%);
+    padding: 14px 34px 14px 34px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+
+    align-self: center;
+    margin: 0px 0px 20px 0px;
+    border-radius: 12px;
+} */
+
+.container-footer {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(40deg, #0d2857, #0d2857);
+    width: 100%;
+    border-radius: 10px;
+    height: 120px;
+}
+
+.modal-visible {
+    display: block;
+}
+.modal-title {
+    font-weight: 600;
+}
+.modal-description {
+    padding: 5px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.modal-description::first-letter {
+    text-transform: capitalize;
+}
+.Button-submit {
+    background: linear-gradient(40deg, #0d2857, #0d2857);
+    border: none;
+    max-width: 160px;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0/16%), 0 2px 10px 0 rgb(0 0 0/12%);
+    padding: 14px 34px 14px 34px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+
+    align-self: center;
+    margin: 0px 0px 20px 0px;
+    border-radius: 12px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    padding: 20px 10px 20px 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    max-width: 70%;
+    max-height: auto;
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.modal-image {
+    width: 30%;
+    height: 30%;
+    margin: -145px 0px 0px 0px;
+    text-align: center;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0/16%), 0 2px 10px 0 rgb(0 0 0/12%);
+    border-radius: 50%;
+    /* z-index: 1; */
+}
+.head-modal {
+    width: 100%;
+
+    height: 160px;
+    background: linear-gradient(40deg, #0d2857, #0d2857);
+}
+.hide {
+    display: none;
+}
+
+#checkbox {
+    width: 50px;
+    height: 50px;
+
+    /* Puedes ajustar otros estilos como colores y bordes */
+    border: 2px solid #333;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Estilo para el label (opcional) */
+
+#input {
+    border: none;
+    color: white;
+    background-color: #0d2857;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    margin: 2px 0px 5px 0px;
+}
+
+#Votos {
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+}
+.progress-bar.bg-danger {
+    background-color: red;
+}
+
+@media only screen and (max-width: 570px) {
+    .wrap {
+        grid-template-columns: auto;
+    }
+}
