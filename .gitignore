@@ -5,6 +5,7 @@
 /public/storage
 /storage/*.key
 /vendor
+/resources/views/home.blade.php
 .env
 .env.backup
 .env.production
